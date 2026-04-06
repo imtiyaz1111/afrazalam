@@ -355,7 +355,7 @@ body {
 /* TEXT */
 .hero-content p {
     font-size: 17px;
-    color: #6B7280;
+    color: #333539;
     /* SECONDARY */
     margin-bottom: 30px;
     max-width: 500px;
@@ -427,18 +427,7 @@ body {
     }
 }
 
-/* FLOAT IMAGE */
-@keyframes floatHero {
-    0% {
-        transform: translateY(0px);
-    }
-    50% {
-        transform: translateY(-12px);
-    }
-    100% {
-        transform: translateY(0px);
-    }
-}
+
 
 /* APPLY STAGGER ANIMATION */
 .hero-badge {

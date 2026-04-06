@@ -291,3 +291,223 @@ document.querySelectorAll(
     el.style.animationPlayState = "paused";
     animationObserver.observe(el);
 });
+
+// ================= CONTACT HEADER ANIMATION =================
+function initContactHeaderAnimation() {
+
+    const section = document.querySelector(".contact-header-hero");
+
+    if (!section) return;
+
+    // enable animation safely
+    section.classList.add("animate-init");
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("active");
+            }
+        });
+    }, { threshold: 0.3 });
+
+    observer.observe(section);
+}
+
+document.addEventListener("DOMContentLoaded", initContactHeaderAnimation);
+
+// ================= CONTACT BOX ANIMATION =================
+const contactBoxes = document.querySelectorAll(".contact-box");
+
+const contactObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+        }
+    });
+}, { threshold: 0.2 });
+
+contactBoxes.forEach(box => {
+    contactObserver.observe(box);
+});
+
+// ================= CONTACT SECTION ANIMATION =================
+function initContactSectionAnimation() {
+
+    const section = document.querySelector(".contact-form-section");
+
+    if (!section) return;
+
+    // enable animation safely
+    section.classList.add("animate-init");
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("contact-show");
+            }
+        });
+    }, { threshold: 0.2 });
+
+    observer.observe(section);
+}
+
+document.addEventListener("DOMContentLoaded", initContactSectionAnimation);
+
+// ================= WHY CONTACT ANIMATION =================
+function initWhyContactAnimation() {
+
+    const section = document.querySelector(".why-contact-section");
+
+    if (!section) return;
+
+    section.classList.add("animate-init");
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("active");
+            }
+        });
+    }, { threshold: 0.2 });
+
+    observer.observe(section);
+}
+
+document.addEventListener("DOMContentLoaded", initWhyContactAnimation);
+
+// ================= PROCESS SECTION ANIMATION =================
+function initProcessAnimation() {
+
+    const section = document.querySelector(".process-section");
+
+    if (!section) return;
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+            }
+        });
+    }, { threshold: 0.2 });
+
+    observer.observe(section);
+}
+
+document.addEventListener("DOMContentLoaded", initProcessAnimation);
+
+
+
+// ================= FAQ TOGGLE =================
+document.querySelectorAll(".faq-question").forEach(btn => {
+    btn.addEventListener("click", () => {
+        const item = btn.parentElement;
+
+        item.classList.toggle("active");
+    });
+});
+
+// ================= FAQ ANIMATION =================
+const faqSection = document.querySelector(".contact-faq-section");
+
+const faqObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("active");
+        }
+    });
+}, { threshold: 0.2 });
+
+faqObserver.observe(faqSection);
+
+// ================= SERVICE HERO ANIMATION =================
+const serviceHero = document.querySelector(".service-header-hero");
+
+if (serviceHero) {
+
+    // ADD INIT CLASS (VERY IMPORTANT)
+    serviceHero.classList.add("animate-init");
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("active");
+            }
+        });
+    }, { threshold: 0.2 });
+
+    observer.observe(serviceHero);
+}
+
+
+// ================= SERVICES ANIMATION =================
+const servicesSection = document.querySelector(".services-list-section");
+
+if (servicesSection) {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("active");
+            }
+        });
+    }, { threshold: 0.2 });
+
+    observer.observe(servicesSection);
+}
+
+// ================= VISION MISSION ANIMATION =================
+const vmSection = document.querySelector(".vision-mission-section");
+
+if (vmSection) {
+
+    // INIT CLASS (VERY IMPORTANT)
+    vmSection.classList.add("animate-init");
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("active");
+            }
+        });
+    }, { threshold: 0.2 });
+
+    observer.observe(vmSection);
+}
+
+// ================= FAQ =================
+document.querySelectorAll(".faq-item").forEach(item => {
+    item.addEventListener("click", () => {
+
+        // close others
+        document.querySelectorAll(".faq-item").forEach(i => {
+            if(i !== item){
+                i.classList.remove("active");
+                i.querySelector(".icon").innerHTML = "+";
+            }
+        });
+
+        // toggle current
+        item.classList.toggle("active");
+
+        const icon = item.querySelector(".icon");
+        icon.innerHTML = item.classList.contains("active") ? "−" : "+";
+
+    });
+});
+
+// ================= CASE HEADER ANIMATION =================
+const caseHero = document.querySelector(".case-header-hero");
+
+if (caseHero) {
+
+    caseHero.classList.add("animate-init");
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("active");
+            }
+        });
+    }, { threshold: 0.2 });
+
+    observer.observe(caseHero);
+}
