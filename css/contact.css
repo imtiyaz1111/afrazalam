@@ -309,6 +309,7 @@
 .map-box {
     opacity: 0;
     transform: translateY(40px);
+  
 }
 
 /* ACTIVE */
@@ -397,8 +398,9 @@
 
 /* ================= MAP ================= */
 .map-box {
-    height: 100%;
-    min-height: 450px;
+    height: 520px;
+    
+  
     border-radius: 20px;
     overflow: hidden;
 

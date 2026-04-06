@@ -50,9 +50,8 @@
                             Get more traffic, better leads, and higher ROI without wasting budget
                         </p>
 
-                        <a href="/contact.html" class="hero-btn">
+                        <a href="#" class="hero-btn open-modal">
                             Book a Free Strategy Call
-
                             <i class="fa-solid fa-arrow-up-right-from-square"></i>
                         </a>
 
@@ -209,7 +208,7 @@
                             </div>
                         </div>
 
-                        <a href="/about.html" class="about-btn">Discover More</a>
+                        <a href="/about/index.html" class="about-btn">Discover More</a>
 
                     </div>
                 </div>
@@ -336,7 +335,7 @@
                         ullam quisquam.</p>
                 </div>
 
-                <a href="#" class="view-all">View All Services →</a>
+                <a href="/services/index.html" class="view-all">View All Services →</a>
             </div>
 
             <div class="row align-items-center mt-5">
@@ -724,7 +723,7 @@
                         delivers real results, more leads, and higher ROI.
                     </p>
 
-                    <a href="#" class="cta-btn">
+                    <a href="#" class="cta-btn open-modal">
                         Book a Call →
                     </a>
                 </div>
@@ -738,6 +737,8 @@
 
     <!-- Footer will load here -->
     <div id="footer"></div>
+
+
 
     <!-- FLOATING BUTTONS -->
     <div class="floating-buttons">
@@ -753,13 +754,83 @@
         </button>
 
     </div>
+    <!-- MODAL -->
+    <div class="custom-modal" id="quoteModal">
+        <div class="modal-overlay" id="closeModal"></div>
 
+        <div class="modal-box">
+            <span class="close-btn" id="closeModalBtn">&times;</span>
+
+            <h3>Get a Free Quote</h3>
+
+            <form class="modal-form">
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" placeholder="John Doe">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" placeholder="john@example.com">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="text" placeholder="+1 (555) 000-0000">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Service Needed</label>
+                        <select>
+                            <option>Select a service</option>
+                            <option>SEO</option>
+                            <option>Marketing</option>
+                            <option>Web Development</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Your Message</label>
+                    <textarea placeholder="Tell us about your project and goals..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    <i class="fa-solid fa-paper-plane"></i> Send Message
+                </button>
+
+                <p class="response-text">⏱ We respond within 24 hours</p>
+
+            </form>
+        </div>
+    </div>
     <!-- Swiper JS (FIXED ORDER) -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
     <script src="./js/script.js"></script>
+
+    <script>
+        document.addEventListener("click", function (e) {
+
+            // OPEN MODAL (for ALL buttons)
+            if (e.target.closest(".open-modal")) {
+                e.preventDefault();
+                document.getElementById("quoteModal").classList.add("active");
+            }
+
+            // CLOSE MODAL
+            if (e.target.id === "closeModal" || e.target.id === "closeModalBtn") {
+                document.getElementById("quoteModal").classList.remove("active");
+            }
+
+        });
+    </script>
 </body>
 
 </html>

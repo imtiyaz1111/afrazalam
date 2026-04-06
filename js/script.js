@@ -511,3 +511,4 @@ if (caseHero) {
 
     observer.observe(caseHero);
 }
+
