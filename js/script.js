@@ -2,14 +2,41 @@
 async function loadComponent(id, file) {
     try {
         const res = await fetch(file);
-        if (!res.ok) throw new Error("Component not found");
+        if (!res.ok) throw new Error(`Failed to load ${file}`);
 
         const data = await res.text();
-        document.getElementById(id).innerHTML = data;
+        const element = document.getElementById(id);
+
+        if (element) {
+            element.innerHTML = data;
+        }
+
+        return true;
+
     } catch (error) {
-        console.error(`Error loading ${file}:`, error);
+        console.error(`❌ Error loading ${file}:`, error);
+        return false;
     }
 }
+
+
+// ================= AUTO PATH FIX (WORKS EVERYWHERE) =================
+function getBasePath() {
+
+    const path = window.location.pathname;
+
+    if (path.includes("/services/")) return "../../";
+    if (path.includes("/about/")) return "../";
+    if (path.includes("/contact/")) return "../";
+    if (path.includes("/case-studies/")) return "../";
+
+    return "./"; // root
+}
+
+function getComponentPath(fileName) {
+    return getBasePath() + "components/" + fileName;
+}
+
 
 // ================= INIT NAVBAR =================
 function initNavbar() {
@@ -20,7 +47,7 @@ function initNavbar() {
 
     if (!toggle || !menu) return;
 
-    // TOGGLE MENU
+    // MENU TOGGLE
     toggle.addEventListener("click", (e) => {
         e.stopPropagation();
 
@@ -35,39 +62,30 @@ function initNavbar() {
             : '<i class="fa-solid fa-bars"></i>';
     });
 
-    // CLOSE ON OVERLAY
-    if (overlay) {
-        overlay.addEventListener("click", () => {
-            menu.classList.remove("active");
-            overlay.classList.remove("active");
-            document.body.style.overflow = "auto";
-            toggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
-        });
-    }
-
-    // CLOSE ON LINK CLICK
+    // CLOSE ON LINK CLICK (MOBILE)
     document.querySelectorAll(".nav-menu a").forEach(link => {
         link.addEventListener("click", () => {
             if (window.innerWidth <= 991) {
                 menu.classList.remove("active");
-                if (overlay) overlay.classList.remove("active");
                 document.body.style.overflow = "auto";
                 toggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
             }
         });
     });
 
-    // ACTIVE LINK
-    const links = document.querySelectorAll(".nav-menu a");
+    // ================= AUTO ACTIVE MENU =================
+    const currentPath = window.location.pathname;
 
-    links.forEach(link => {
-        link.addEventListener("click", function () {
-            links.forEach(l => l.classList.remove("active"));
-            this.classList.add("active");
-        });
+    document.querySelectorAll(".nav-menu a").forEach(link => {
+
+        const href = link.getAttribute("href");
+
+        if (currentPath.includes(href.replace("/index.html", ""))) {
+            link.classList.add("active");
+        }
     });
 
-    // STICKY NAVBAR
+    // ================= STICKY NAVBAR =================
     window.addEventListener("scroll", () => {
         const header = document.querySelector(".header-wrapper");
         if (header) {
@@ -76,19 +94,24 @@ function initNavbar() {
     });
 }
 
+
 // ================= INIT EVERYTHING =================
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
 
-    // ✅ LOAD NAVBAR + INIT AFTER LOAD
-    loadComponent("navbar", "../components/navbar.html").then(() => {
+    const navbarPath = getComponentPath("navbar.html");
+    const footerPath = getComponentPath("footer.html");
+
+    // LOAD NAVBAR
+    const navLoaded = await loadComponent("navbar", navbarPath);
+
+    if (navLoaded) {
         initNavbar();
-    });
+    }
 
-    // ✅ LOAD FOOTER
-    loadComponent("footer", "../components/footer.html");
+    // LOAD FOOTER
+    loadComponent("footer", footerPath);
 
 });
-
 // ================= SERVICES SLIDER =================
 if (document.querySelector(".services-slider")) {
     new Swiper(".services-slider", {
