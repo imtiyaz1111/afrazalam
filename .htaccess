@@ -1,0 +1,20 @@
+RewriteEngine On
+
+# ================= REMOVE index.html =================
+RewriteCond %{THE_REQUEST} \s(.*/)?index\.html[\s?] [NC]
+RewriteRule ^(.*/)?index\.html$ /$1 [R=301,L]
+
+# ================= REMOVE /index =================
+RewriteRule ^(.*/)?index/?$ /$1 [R=301,L]
+
+# ================= REMOVE .html EXTENSION =================
+RewriteCond %{THE_REQUEST} \s(.+?)\.html[\s?] [NC]
+RewriteRule ^(.+?)\.html$ /$1 [R=301,L]
+
+# ================= INTERNAL LOAD .html =================
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.+)$ $1.html [L]
+
+# ================= 404 ERROR PAGE =================
+ErrorDocument 404 /404.html

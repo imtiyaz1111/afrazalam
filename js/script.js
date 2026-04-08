@@ -73,17 +73,28 @@ function initNavbar() {
         });
     });
 
-    // ================= AUTO ACTIVE MENU =================
-    const currentPath = window.location.pathname;
+  // ================= AUTO ACTIVE MENU (FIXED) =================
+const currentPath = window.location.pathname.replace(/\/$/, "");
 
-    document.querySelectorAll(".nav-menu a").forEach(link => {
+document.querySelectorAll(".nav-menu a").forEach(link => {
 
-        const href = link.getAttribute("href");
+    let href = link.getAttribute("href");
 
-        if (currentPath.includes(href.replace("/index.html", ""))) {
+    // Normalize href
+    href = href.replace("/index.html", "").replace(/\/$/, "");
+
+    // Special case for HOME
+    if (href === "" || href === "/") {
+        if (currentPath === "" || currentPath === "/" || currentPath === "/index.html") {
             link.classList.add("active");
         }
-    });
+    } 
+    // Match exact section pages
+    else if (currentPath.startsWith(href)) {
+        link.classList.add("active");
+    }
+
+});
 
     // ================= STICKY NAVBAR =================
     window.addEventListener("scroll", () => {
