@@ -15,6 +15,7 @@
     <link rel="icon" href="../images/favicon-32x32.png" type="image/png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
     <!-- FONT AWESOME (Latest) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
@@ -26,41 +27,59 @@
     <!-- Navbar will load here -->
     <div id="navbar"></div>
 
-    <!-- ================= ABOUT HERO ================= -->
+    <!-- /* ================= PREMIUM ABOUT HERO ================= */ -->
     <section class="about-hero">
-
         <div class="container">
-            <div class="about-hero-content">
+            <div class="row align-items-center">
 
-                <!-- BREADCRUMB -->
-                <div class="breadcrumb">
-                    <a href="../index.html">Home</a>
-                    <span>›</span>
-                    <span>About</span>
+                <!-- LEFT CONTENT -->
+                <div class="col-lg-6">
+                    <div class="about-hero-content">
+
+                        <!-- BREADCRUMB -->
+                        <div class="breadcrumb">
+                            <a href="../index.html">Home</a>
+                            <span>›</span>
+                            <span>About</span>
+                        </div>
+
+                        <!-- HEADING -->
+                        <h1>
+                            About the Digital Marketing
+                            <span>Consultant</span><br>
+                            Behind the Growth
+                        </h1>
+
+                        <!-- TEXT -->
+                        <p>
+                            I help brands generate measurable ROI through data-driven SEO,
+                            paid advertising, and AI-powered marketing strategies —
+                            turning clicks into customers.
+                        </p>
+
+                        <!-- BUTTON -->
+                        <div class="hero-btn-group">
+                            <a href="#" class="hero-btn primary open-modal">
+                                Book Free Strategy Call
+                            </a>
+
+                            <a href="#" class="hero-btn secondary">
+                                Explore Services
+                            </a>
+                        </div>
+
+                    </div>
                 </div>
 
-                <!-- HEADING -->
-                <h1>
-                    About the Digital Marketing Consultant <br>
-                    Behind the Growth
-                </h1>
-
-                <!-- TEXT -->
-                <p>
-                    I help brands generate measurable ROI through data-driven SEO,
-                    paid advertising, and AI-powered marketing strategies —
-                    turning clicks into customers.
-                </p>
-
-                <!-- BUTTON -->
-                <a href="#" class="hero-btn open-modal">
-                    Book Free Strategy Call
-                    <i class="fa-solid fa-arrow-right"></i>
-                </a>
+                <!-- RIGHT IMAGE -->
+                <div class="col-lg-6">
+                    <div class="hero-image">
+                        <img src="../images/about.png" alt="Digital Marketing">
+                    </div>
+                </div>
 
             </div>
         </div>
-
     </section>
 
     <!-- ================= WHO I AM ================= -->
@@ -88,10 +107,11 @@
                 <div class="col-lg-6">
                     <div class="who-content">
 
-                        <span class="section-badge">Who I Am</span>
+                        <span class="section-badge">ABOUT ME</span>
 
                         <h2>
-                            A Results-Driven Digital Marketing Consultant Focused on Real Growth
+                            I Help Businesses Grow with <span class="highlight-green">SEO</span>,<span
+                                class="highlight-blue"> Ads</span> & <span class="highlight-blue">AI</span>
                         </h2>
 
                         <p>
@@ -304,72 +324,154 @@
         </div>
 
     </section>
+    <!-- why-section -->
+    <section class="why-section">
+        <div class="container">
 
-    <!-- ================= SERVICES ================= -->
-    <section class="services-section-about">
+            <!-- HEADING -->
+            <div class="why-heading text-center">
+                <h2>Why Work With Me?</h2>
+            </div>
+
+            <div class="row">
+
+                <!-- ITEM 1 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="why-card">
+                        <div class="icon green">
+                            <i class="fa-solid fa-bullseye"></i>
+                        </div>
+                        <h4>Strategy-first approach</h4>
+                        <p>
+                            We start with the right strategy, not random tactics.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- ITEM 2 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="why-card">
+                        <div class="icon blue">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                        <h4>ROI-focused execution</h4>
+                        <p>
+                            Every campaign is built to deliver measurable business results.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- ITEM 3 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="why-card">
+                        <div class="icon purple">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <h4>Personalized solutions</h4>
+                        <p>
+                            Custom strategies tailored to your goals, industry and audience.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- ITEM 4 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="why-card">
+                        <div class="icon orange">
+                            <i class="fa-solid fa-file-lines"></i>
+                        </div>
+                        <h4>Transparent reporting</h4>
+                        <p>
+                            Clear reports, honest communication and full transparency.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= WHAT YOU CAN EXPECT ================= -->
+    <section class="expect-section">
 
         <div class="container">
 
-            <!-- HEADER -->
-            <div class="services-header-about">
-                <span class="services-badge">SERVICES</span>
-
-                <h2>What I Help Businesses With</h2>
+            <!-- SECTION HEADING -->
+            <div class="expect-heading text-center">
+                <h2>What You Can Expect</h2>
             </div>
 
-            <!-- CARDS -->
-            <div class="row g-4">
+            <div class="row">
 
                 <!-- CARD 1 -->
                 <div class="col-lg-3 col-md-6">
-                    <div class="service-card-about">
-                        <div class="icon">
-                            <i class="fa-solid fa-globe"></i>
+                    <div class="expect-card">
+
+                        <!-- ICON -->
+                        <div class="expect-icon green">
+                            <i class="fa-solid fa-users"></i>
                         </div>
-                        <h4>Lead Generation Websites</h4>
+
+                        <!-- TITLE -->
+                        <h4>More Leads</h4>
+
+                        <!-- DESCRIPTION -->
                         <p>
-                            Custom-built, conversion-optimized websites designed to turn visitors
-                            into qualified leads.
+                            Attract high-quality leads that convert.
                         </p>
+
                     </div>
                 </div>
 
                 <!-- CARD 2 -->
                 <div class="col-lg-3 col-md-6">
-                    <div class="service-card-about">
-                        <div class="icon">
-                            <i class="fa-solid fa-magnifying-glass"></i>
+                    <div class="expect-card">
+
+                        <div class="expect-icon blue">
+                            <i class="fa-solid fa-chart-line"></i>
                         </div>
-                        <h4>SEO Optimization</h4>
+
+                        <h4>Better Conversion</h4>
+
                         <p>
-                            Technical SEO, content strategy, and link building to dominate organic search results.
+                            Optimize your funnel and improve conversions.
                         </p>
+
                     </div>
                 </div>
 
                 <!-- CARD 3 -->
                 <div class="col-lg-3 col-md-6">
-                    <div class="service-card-about">
-                        <div class="icon">
+                    <div class="expect-card">
+
+                        <div class="expect-icon orange">
                             <i class="fa-solid fa-dollar-sign"></i>
                         </div>
-                        <h4>Paid Ads (Meta & Google)</h4>
+
+                        <h4>Higher ROI</h4>
+
                         <p>
-                            High-ROI paid campaigns across Google Ads and Meta platforms with precise targeting.
+                            Maximize return on every marketing rupee.
                         </p>
+
                     </div>
                 </div>
 
                 <!-- CARD 4 -->
                 <div class="col-lg-3 col-md-6">
-                    <div class="service-card-about">
-                        <div class="icon">
-                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    <div class="expect-card">
+
+                        <div class="expect-icon purple">
+                            <i class="fa-solid fa-bolt"></i>
                         </div>
-                        <h4>Conversion Optimization</h4>
+
+                        <h4>Faster Growth with AI</h4>
+
                         <p>
-                            A/B testing, funnel optimization, and UX improvements to maximize every visitor.
+                            Leverage AI automation to scale faster.
                         </p>
+
                     </div>
                 </div>
 
@@ -379,146 +481,83 @@
 
     </section>
 
-    <!-- ================= WHY WORK WITH ME ================= -->
-    <section class="why-section">
+    <!-- PROCESS SECTION -->
+    <section class="process-section">
+        <div class="container text-center">
 
+            <h2 class="process-title">My Proven 4-Step Process</h2>
+
+            <div class="process-wrapper">
+
+                <!-- LINE -->
+                <div class="process-line"></div>
+
+                <!-- STEP 1 -->
+                <div class="process-step">
+                    <div class="step-circle blue">1</div>
+                    <h6>Understand</h6>
+                    <p>I learn about your business, goals, and challenges.</p>
+                </div>
+
+                <!-- STEP 2 -->
+                <div class="process-step">
+                    <div class="step-circle green">2</div>
+                    <h6>Strategy</h6>
+                    <p>I create a custom growth strategy that fits your needs.</p>
+                </div>
+
+                <!-- STEP 3 -->
+                <div class="process-step">
+                    <div class="step-circle orange">3</div>
+                    <h6>Execute</h6>
+                    <p>I implement, test and optimize campaigns for best results.</p>
+                </div>
+
+                <!-- STEP 4 -->
+                <div class="process-step">
+                    <div class="step-circle purple">4</div>
+                    <h6>Scale</h6>
+                    <p>We scale what works and drive consistent growth.</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- CTA SECTION -->
+    <section class="cta-section">
         <div class="container">
-            <div class="row align-items-center">
+
+            <div class="cta-wrapper">
 
                 <!-- LEFT CONTENT -->
-                <div class="col-lg-6">
-                    <div class="why-content">
-
-                        <span class="why-badge">WHY ME</span>
-
-                        <h2>Why Work With Me</h2>
-
-                        <p>
-                            When you work with me, you get a dedicated partner — not an agency assembly line.
-                            I bring clarity, honesty, and a relentless focus on results.
-                        </p>
-
-                        <!-- LIST -->
-                        <div class="why-list">
-
-                            <div class="why-item">
-                                <div class="icon">
-                                    <i class="fa-solid fa-user-check"></i>
-                                </div>
-                                <span>Direct access — no middle layer</span>
-                            </div>
-
-                            <div class="why-item">
-                                <div class="icon">
-                                    <i class="fa-regular fa-heart"></i>
-                                </div>
-                                <span>Honest recommendations always</span>
-                            </div>
-
-                            <div class="why-item">
-                                <div class="icon">
-                                    <i class="fa-solid fa-chart-line"></i>
-                                </div>
-                                <span>Clear, transparent reporting</span>
-                            </div>
-
-                            <div class="why-item">
-                                <div class="icon">
-                                    <i class="fa-solid fa-bullseye"></i>
-                                </div>
-                                <span>ROI-focused execution</span>
-                            </div>
-
-                        </div>
-
-                    </div>
-                </div>
-
-                <!-- RIGHT IMAGE -->
-                <div class="col-lg-6">
-                    <div class="why-image">
-                        <img src="/images/hero-img.png" alt="Why Work With Me">
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-    </section>
-
-    <!-- ================= VISION SECTION ================= -->
-    <section class="vision-section">
-
-        <div class="container">
-
-            <!-- HEADER -->
-            <div class="vision-header">
-
-                <span class="vision-badge">VISION</span>
-
-                <h2>Looking Ahead</h2>
-
-                <p>
-                    The future of marketing is intelligent, automated, and deeply personalized.
-                    I'm committed to staying at the cutting edge — integrating AI, automation,
-                    and long-term growth systems to help businesses scale faster and smarter.
-                </p>
-
-            </div>
-
-            <!-- PILLS -->
-            <div class="vision-items">
-
-                <div class="vision-card">
-                    <i class="fa-solid fa-microchip"></i>
-                    <span>AI-Powered Marketing</span>
-                </div>
-
-                <div class="vision-card">
-                    <i class="fa-solid fa-wand-magic-sparkles"></i>
-                    <span>Smart Automation</span>
-                </div>
-
-                <div class="vision-card">
-                    <i class="fa-solid fa-seedling"></i>
-                    <span>Scalable Systems</span>
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-    <!-- ================= FINAL CTA ================= -->
-    <section class="final-cta-section">
-
-        <div class="container">
-
-            <div class="cta-box">
-
-                <!-- CONTENT -->
-                <div class="cta-content">
-
-                    <span class="cta-badge">GET STARTED</span>
-
-                    <h2>Let’s Talk About Your Business Growth</h2>
-
+                <div class="cta-left">
+                    <h3>Ready to Grow Your Business?</h3>
                     <p>
-                        Stop guessing and start scaling. Get a clear, data-driven strategy tailored
-                        to your business goals. Let’s discuss how we can grow your revenue faster.
+                        Book a free strategy call and let’s discuss how I can help
+                        you generate more leads and increase your revenue.
                     </p>
+                </div>
 
-                    <!-- BUTTONS -->
-                    <div class="cta-buttons">
+                <!-- RIGHT CONTENT -->
+                <div class="cta-right">
 
-                        <a href="#" class="cta-btn primary open-modal">
-                            Book Free Strategy Call →
-                        </a>
+                    <a href="#" class="cta-btn open-modal">
+                        Book a Free Strategy Call
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
 
-                        <a href="https://wa.me/919874512786" class="cta-btn secondary">
-                            Chat on WhatsApp
-                        </a>
-
+                    <!-- TRUST -->
+                    <div class="cta-trust">
+                        <div class="cta-avatars">
+                            <img src="../images/p1.jpg" alt="">
+                            <img src="../images/p2.jpg" alt="">
+                            <img src="../images/p3.jpg" alt="">
+                            <img src="../images/p4.jpg" alt="">
+                        </div>
+                        <span>30+ businesses already growing</span>
                     </div>
 
                 </div>
@@ -526,8 +565,8 @@
             </div>
 
         </div>
-
     </section>
+
     <!-- Footer will load here -->
     <div id="footer"></div>
 
@@ -545,11 +584,12 @@
         </button>
 
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
     <script src="../js/script.js"></script>
-     <!-- MODAL -->
+    <!-- MODAL -->
     <div class="custom-modal" id="quoteModal">
         <div class="modal-overlay" id="closeModal"></div>
 
@@ -603,7 +643,7 @@
             </form>
         </div>
     </div>
-       <script>
+    <script>
         document.addEventListener("click", function (e) {
 
             // OPEN MODAL (for ALL buttons)
