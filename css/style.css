@@ -118,6 +118,33 @@ body {
     border-radius: 10px;
 }
 
+/* ================= DROPDOWN MENU FIX ================= */
+.nav-menu .dropdown-menu {
+    border: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 10px;
+    margin-top: 15px;
+    display: none;
+}
+.nav-menu .dropdown:hover .dropdown-menu {
+    display: block; /* Show on hover in desktop */
+}
+.nav-menu .dropdown-item {
+    font-weight: 500 !important;
+    padding: 10px 15px !important;
+    border-radius: 8px;
+    color: #374151 !important;
+    display: block;
+}
+.nav-menu .dropdown-item::after {
+    display: none !important; /* Hide the underline */
+}
+.nav-menu .dropdown-item:hover {
+    background: #f3f4f6 !important;
+    color: #2563eb !important;
+}
+
 /* ================= BUTTON ================= */
 .nav-btn {
     background: #2563eb !important;
