@@ -1049,8 +1049,10 @@ body {
     color: #374151;
 }
 
+/* INPUT + SELECT SAME STYLE */
 .lead-form input,
-.lead-form textarea {
+.lead-form textarea,
+.lead-form select {
     width: 100%;
     padding: 12px 14px;
     border: 1px solid #e5e7eb;
@@ -1058,11 +1060,18 @@ body {
     font-size: 14px;
     outline: none;
     transition: 0.3s;
+    background-color: #fff;
+    appearance: none; /* REMOVE DEFAULT STYLE */
+    -webkit-appearance: none;
+    -moz-appearance: none;
 }
 
+/* FOCUS EFFECT */
 .lead-form input:focus,
-.lead-form textarea:focus {
+.lead-form textarea:focus,
+.lead-form select:focus {
     border-color: #2563eb;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
 }
 
 /* BUTTON */
