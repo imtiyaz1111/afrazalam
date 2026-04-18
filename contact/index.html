@@ -105,14 +105,16 @@
 
                 <!-- ITEM 4 -->
                 <div class="col-lg-3 col-md-6">
-                    <div class="contact-box">
-                        <div class="icon">
-                            <i class="fa-brands fa-whatsapp"></i>
+                    <a href="https://wa.me/919874512786" target="_blank" style="text-decoration: none; color: inherit; display: block;">
+                        <div class="contact-box">
+                            <div class="icon">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </div>
+                            <h4>WhatsApp</h4>
+                            <p class="main">+91 98745 12786</p>
+                            <span>Quick chat anytime</span>
                         </div>
-                        <h4>WhatsApp</h4>
-                        <p class="main">+1 (555) 123-4567</p>
-                        <span>Quick chat anytime</span>
-                    </div>
+                    </a>
                 </div>
 
             </div>
@@ -137,29 +139,29 @@
                 <div class="col-lg-6">
                     <div class="contact-form-box">
 
-                        <form>
+                        <form action="../send-lead.php" method="POST">
 
                             <div class="row g-3">
 
                                 <div class="col-md-6">
                                     <label>Full Name</label>
-                                    <input type="text" placeholder="John Doe">
+                                    <input type="text" name="name" required>
                                 </div>
 
                                 <div class="col-md-6">
                                     <label>Email Address</label>
-                                    <input type="email" placeholder="john@example.com">
+                                    <input type="email" name="email" required>
                                 </div>
 
                                 <div class="col-md-6">
                                     <label>Phone Number</label>
-                                    <input type="text" placeholder="+1 (555) 000-0000">
+                                    <input type="text" name="name" required>
                                 </div>
 
                                 <div class="col-md-6">
                                     <label>Service Needed</label>
-                                    <select>
-                                        <option>Select a service</option>
+                                    <select name="service" required>
+                                        <option value="">Select a service</option>
                                         <option>SEO</option>
                                         <option>Paid Ads</option>
                                         <option>Web Development</option>
@@ -168,21 +170,21 @@
 
                                 <div class="col-12">
                                     <label>Your Message</label>
-                                    <textarea rows="4" placeholder="Tell me about your project and goals..."></textarea>
+                                    <textarea name="message" rows="4"></textarea>
                                 </div>
 
                             </div>
 
                             <!-- BUTTON -->
+                            <!-- 🔒 SPAM PROTECTION -->
+                            <input type="text" name="hidden_field" style="display:none">
+
                             <button type="submit" class="contact-btn">
                                 <i class="fa-regular fa-paper-plane"></i>
                                 Send Message
                             </button>
 
-                            <p class="response-text">
-                                <i class="fa-regular fa-clock"></i>
-                                I respond within 24 hours
-                            </p>
+                            
 
                         </form>
 
@@ -504,30 +506,30 @@
 
             <h3>Get a Free Quote</h3>
 
-            <form class="modal-form">
+            <form action="../send-lead.php" method="POST" class="modal-form">
 
                 <div class="form-row">
                     <div class="form-group">
                         <label>Full Name</label>
-                        <input type="text" placeholder="John Doe">
+                        <input type="text" name="name" required>
                     </div>
 
                     <div class="form-group">
                         <label>Email Address</label>
-                        <input type="email" placeholder="john@example.com">
+                        <input type="email" name="email" required>
                     </div>
                 </div>
 
                 <div class="form-row">
                     <div class="form-group">
                         <label>Phone Number</label>
-                        <input type="text" placeholder="+1 (555) 000-0000">
+                        <input type="text" name="name" required>
                     </div>
 
                     <div class="form-group">
                         <label>Service Needed</label>
-                        <select>
-                            <option>Select a service</option>
+                        <select name="service" required>
+                            <option value="">Select a service</option>
                             <option>SEO</option>
                             <option>Marketing</option>
                             <option>Web Development</option>
@@ -537,14 +539,17 @@
 
                 <div class="form-group">
                     <label>Your Message</label>
-                    <textarea placeholder="Tell me about your project and goals..."></textarea>
+                    <textarea name="message"></textarea>
                 </div>
 
+                <!-- SPAM FIELD -->
+                <input type="text" name="hidden_field" style="display:none">
+
                 <button type="submit" class="submit-btn">
-                    <i class="fa-solid fa-paper-plane"></i> Send Message
+                    Send Message
                 </button>
 
-                <p class="response-text">⏱ I respond within 24 hours</p>
+                
 
             </form>
         </div>

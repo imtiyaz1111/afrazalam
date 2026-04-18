@@ -516,43 +516,43 @@
                         <h3>Get Free Growth Strategy</h3>
                         <p>Tell me about your business and I’ll suggest the best strategy for you.</p>
 
-                        <form>
+                        <form action="../send-lead.php" method="POST">
 
                             <div class="row g-3">
 
                                 <!-- NAME -->
                                 <div class="col-md-6">
                                     <label>Full Name</label>
-                                    <input type="text" placeholder="John Doe">
+                                    <input type="text" name="name" required>
                                 </div>
 
                                 <!-- EMAIL -->
                                 <div class="col-md-6">
                                     <label>Email Address</label>
-                                    <input type="email" placeholder="john@example.com">
+                                    <input type="email" name="email" required>
                                 </div>
 
                                 <!-- PHONE -->
                                 <div class="col-md-6">
                                     <label>Phone Number</label>
-                                    <input type="text" placeholder="+1 (555) 000-0000">
+                                    <input type="text" name="name" required>
                                 </div>
 
                                 <!-- SERVICE -->
                                 <div class="col-md-6">
                                     <label>Service Needed</label>
-                                    <select>
-                                        <option>Select a service</option>
-                                        <option>SEO</option>
-                                        <option>Paid Ads</option>
-                                        <option>Web Development</option>
-                                    </select>
+                                    <select name="service" required>
+                            <option value="">Select a service</option>
+                            <option>Paid Ads</option>
+                            <option>SEO</option>
+                            <option>AI Marketing</option>
+                        </select>
                                 </div>
 
                                 <!-- MESSAGE -->
                                 <div class="col-12">
                                     <label>Your Message</label>
-                                    <textarea rows="4" placeholder="Tell me about your project and goals..."></textarea>
+                                    <textarea name="message" rows="4"></textarea>
                                 </div>
 
                             </div>
@@ -698,47 +698,50 @@
 
             <h3>Get a Free Quote</h3>
 
-            <form class="modal-form">
+            <form action="../send-lead.php" method="POST" class="modal-form">
 
                 <div class="form-row">
                     <div class="form-group">
                         <label>Full Name</label>
-                        <input type="text" placeholder="John Doe">
+                        <input type="text" name="name" required>
                     </div>
 
                     <div class="form-group">
                         <label>Email Address</label>
-                        <input type="email" placeholder="john@example.com">
+                        <input type="email" name="email" required>
                     </div>
                 </div>
 
                 <div class="form-row">
                     <div class="form-group">
                         <label>Phone Number</label>
-                        <input type="text" placeholder="+1 (555) 000-0000">
+                        <input type="text" name="name" required>
                     </div>
 
                     <div class="form-group">
                         <label>Service Needed</label>
-                        <select>
-                            <option>Select a service</option>
+                        <select name="service" required>
+                            <option value="">Select a service</option>
+                            <option>Paid Ads</option>
                             <option>SEO</option>
-                            <option>Marketing</option>
-                            <option>Web Development</option>
+                            <option>AI Marketing</option>
                         </select>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label>Your Message</label>
-                    <textarea placeholder="Tell me about your project and goals..."></textarea>
+                    <textarea name="message"></textarea>
                 </div>
 
+                <!-- SPAM FIELD -->
+                <input type="text" name="hidden_field" style="display:none">
+
                 <button type="submit" class="submit-btn">
-                    <i class="fa-solid fa-paper-plane"></i> Send Message
+                    Send Message
                 </button>
 
-                <p class="response-text">⏱ I respond within 24 hours</p>
+                
 
             </form>
         </div>

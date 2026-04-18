@@ -13,9 +13,12 @@ body {
 }
 
 /* ================= GLOBAL FIX ================= */
+body {
+    overflow-x: hidden;
+}
+
 .container {
     width: 100%;
-    overflow: hidden;
 }
 
 /* ================= HEADER ================= */
@@ -119,22 +122,31 @@ body {
 }
 
 /* ================= DROPDOWN MENU FIX ================= */
+.nav-menu .dropdown {
+    position: relative;
+}
 .nav-menu .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
     border: none;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     border-radius: 12px;
     padding: 10px;
     margin-top: 15px;
     display: none;
+    min-width: 200px;
 }
 .nav-menu .dropdown:hover .dropdown-menu {
     display: block; /* Show on hover in desktop */
 }
 .nav-menu .dropdown-item {
+    margin-top: 10px;
     font-weight: 500 !important;
     padding: 10px 15px !important;
     border-radius: 8px;
-    color: #374151 !important;
+    color: black !important;
     display: block;
 }
 .nav-menu .dropdown-item::after {
