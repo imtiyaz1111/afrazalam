@@ -147,3 +147,48 @@ document.querySelectorAll(".faq-question").forEach(q => {
         q.parentElement.classList.toggle("active");
     });
 });
+
+const boxes = document.querySelectorAll('.contact-box');
+
+window.addEventListener('scroll', () => {
+    boxes.forEach(box => {
+        const top = box.getBoundingClientRect().top;
+
+        if (top < window.innerHeight - 100) {
+            box.classList.add('show');
+        }
+    });
+});
+
+const contactSection = document.querySelector('.contact-form-section');
+
+window.addEventListener('scroll', () => {
+    const top = contactSection.getBoundingClientRect().top;
+
+    if (top < window.innerHeight - 100) {
+        contactSection.classList.add('contact-show');
+    }
+});
+
+const whySection = document.querySelector('.why-contact-section');
+
+window.addEventListener('scroll', () => {
+    const top = whySection.getBoundingClientRect().top;
+
+    if (top < window.innerHeight - 100) {
+        whySection.classList.add('animate-init');
+        whySection.classList.add('active');
+    }
+});
+
+const processSection = document.querySelector('.process-section');
+
+window.addEventListener('scroll', () => {
+    const top = processSection.getBoundingClientRect().top;
+
+    if (top < window.innerHeight - 100) {
+        processSection.classList.add('show');
+    }
+});
+
+
